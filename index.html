@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MI-Tour</title>
+	<link rel="stylesheet" href="style.css">
+	<!--<script src="script.js" defer></script>-->
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="header-box">
+		<h1 class="main-title">MI-Tour</h1>
+	</div>
+	<div class="body-box">
+		<section class="intro">
+			<h2 class="subtitle">Herzlich willkommen bei uns im Team!</h2>
+			<p class="intro-text">Damit du als Mitarbeiter:in der VBZ, des Unternehmensbereichs Markt und des Teams Information &amp; Produktentwicklung unser Angebot besser kennenlernst und aus Kundenperspektive erlebst, schicken wir dich auf eine circa 3-stündige  MI-Tour. An jeder Station warten kleine Aufgabe auf dich, die dich mit unserem vielfältigen Angebot vertrauter machen.</p>
+			<p class="intro-text">Viel Spass beim Entdecken der VBZ!</p>
+			
+			<div class="hinweise">
+				<h2 class="subtitle">Hinweise:</h2>
+				<ul>
+					<li>Start- und Endpunkt: VBZ Hauptgebäude, Luggwegstrasse 65, 8048 Zürich</li>
+					<li>Ausrüstung: Gültiges Ticket Zone 110, Stift, Smartphone mit installierter ZVV-App, ZüriMobil-App, PubliBike-App (inkl. Registrierung) und WhatsApp.</li>
+					<li>Generell: Notiere dir während der Tour, was dir durch den Kopf geht, wo du weitere Ideen hast und wo wir uns verbessern können.</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<button type="button" id="buttonQuiz01" class="collapsible">Grimselstrasse</button>
+			<div class="content">
+				<div class="content-box">
+					<p class="quizz-text">Du möchtest mit dem Tram 2 an den Albisriederplatz.</p>
+					<label for="antwort01" class="quizz-label">Welche Elemente an der Haltestelle helfen dir, die richtige Fahrtrichtung ausfindig zu machen?</label>
+					<textarea id="antwort01" placeholder="Notiere, was du siehst..." class="text-antwort"></textarea>
+					<p class="quizz-text">Nimm nun das Tram 2 in die richtige Richtung bis an den Albisriederplatz.</p>
+					<button type="button" id="submitButton01" onclick="inputCheck_01()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz02" class="collapsible">Albisriederplatz</button>
+			<div class="content">
+				<div class="content-box">
+					<label for="antwort02a" class="quizz-label">Am Albisriederplatz befindet sich auf dem Dach der Mittelinsel ein Pilotprojekt des Programms "Smarte Haltestelle". Um was handelt es sich?</label>
+					<textarea id="antwort02a" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<label for="antwort02b" class="quizz-label">Dein nächstes Ziel ist das Heuried. Nutze die <a class="text-link" href="https://www.zvv.ch/zvv/de/service/apps/zvv-app.html" target="_blank">ZVV-App</a> um dir eine gute öV-Verbindung vom Albisriederplatz zum Heuried heraus zu suchen. Welche Routenoptionen hast du?</label>
+					<textarea id="antwort02b" placeholder="Notiere dir die Optionen..."  class="text-antwort"></textarea>
+					<p class="quizz-text">Reise nun mit der nächsten möglichen Option nach Heuried.</p>
+					<button type="button" id="submitButton02" onclick="inputCheck_02()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz03" class="collapsible">Heuried</button>
+			<div class="content">
+				<div class="content-box">
+					<label for="antwort03" class="quizz-label">In der Tramwendeschlaufe Heuried befindet sich eine ZüriMobil-Station. Hier werden nachhaltige Verkehrsmittel gebündelt und der Umstieg vom öV auf die Mikromobilität und umgekehrt fällt besonders leicht. Suche die ZüriMobil-Station Heuried auf der ZüriMobil-App und finde mit einem Klick heraus, welche Sharing-Angebote hier normalerweise zur Verfügung stehen. Welche sind es?</label>
+					<textarea id="antwort03" placeholder="Notiere, was du siehst..." class="text-antwort"></textarea>
+					<p class="quizz-text">Benutze anschliessend die <a class="text-link" href=https://www.stadt-zuerich.ch/site/zuerimobil/de/index.html"  target="_blank">ZüriMobil-App</a> (mit Absprung auf die <a class="text-link" href="https://www.publibike.ch/de/publibike"  target="_blank">Publibike-App</a>) und (e-)radle nach Zürich, Binz. Die schnellste Route findest du mit einer Veloroutenabfrage in der ZüriMobil-App.</p>
+					<p class="quizz-text quizz-hinweis">Hinweis: Falls etwas nicht funktioniert oder keine Velos an der Station verfügbar sind, gehst du stattdessen zu Fuss an die Station Zürich, Friesenberg. Den schnellsten Fussweg nach Zürich, Friesenberg findest du mit einer Fussroutenabfrage in der <a class="text-link" href=https://www.stadt-zuerich.ch/site/zuerimobil/de/index.html"  target="_blank">ZüriMobil-App</a>. Folge in Zürich, Friesenberg den Anweisungen unter Zürich, Binz.</p>
+					<button type="button" id="submitButton03" onclick="inputCheck_03()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz04" class="collapsible">Zürich, Binz</button>
+			<div class="content">
+				<div class="content-box">
+					<label for="antwort04" class="quizz-label">Starte einen WhatsApp-Chat mit <a class="text-link" href="https://www.stadt-zuerich.ch/messenger"  target="_blank">Alerto</a>. Gib "S10" ein, um abzuchecken, ob auf der S10 eine Störung vorliegt. Welche Störungen liegen im Moment vor?</label>
+					<textarea id="antwort04" placeholder="Notiere dir allfällige Störungen..." class="text-antwort"></textarea>
+					<p class="quizz-text">Nimm nun die S10 und fahre an den Hauptbahnhof.</p>
+					<button type="button" id="submitButton04" onclick="inputCheck_04()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz05" class="collapsible">Zürich, Hauptbahnhof</button>
+			<div class="content">
+				<div class="content-box">
+					<p class="quizz-text">Finde den ZVV-Flagshipstore und sag' deinen neuen Kolleg:innen am Schalter kurz "Hallo".</p>
+					<label for="antwort05" class="quizz-label">Schau' dich etwas um (Angebot, Flyer, Merchandise). Welches Angebot im Store oder welchen Merchandise-Artikel findest du besonders cool?</label>
+					<textarea id="antwort05" placeholder="Notiere dir die Artikel..." class="text-antwort"></textarea>
+					<p class="quizz-text">Gehe zur Haltestelle Bahnhofplatz/Hauptbahnhof. Wenn du nicht weisst, wie du da am einfachsten hinkommst, helfen dir die Kolleg:innen am Schalter gerne weiter.</p>
+					<button type="button" id="submitButton05" onclick="inputCheck_05()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz06" class="collapsible">Bahnhofplatz/Hauptbahnhof</button>
+			<div class="content">
+				<div class="content-box">
+					<label for="antwort06" class="quizz-label">Du möchtest auf das Tram 3 Richtung Albisrieden. Mit einem Blick auf den sogenannten DFI (steht für «Dynamische Fahrgastinformation») erkennst du, wann das nächste Tram kommt. In wie vielen Minuten ist das?</label>
+					<textarea id="antwort06" placeholder="Notiere dir die Zeit..." class="text-antwort"></textarea>
+					<p class="quizz-text">Steige ins Tram 3 Richtung Albisrieden.</p>
+					<button type="button" id="submitButton06" onclick="inputCheck_06()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz07" class="collapsible">Im Fahrzeug</button>
+			<div class="content">
+				<div class="content-box">
+					<label for="antwort07a" class="quizz-label">Mit Werbung im und am Fahrzeug generieren die VBZ einen Teil ihrer Einnahmen. Welche sogenannten Traffic Media-Produkte erkennst du in und an deinem aktuellen Tram?</label>
+					<textarea id="antwort07a" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<label for="antwort07b" class="quizz-label">Der Info-Bildschirm im Tram hilft unseren Fahrgästen sich während der Reise zu orientieren und informieren. Welche Fahrgastinformationen werden auf diesem Bildschirm alles angezeigt?</label>
+					<textarea id="antwort07b" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<p class="quizz-text">Steige am Hubertus aus.</p>
+					<button type="button" id="submitButton07" onclick="inputCheck_07()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz08" class="collapsible">Hubertus</button>
+			<div class="content">
+				<div class="content-box">
+					<label for="antwort08a" class="quizz-label">Am Hubertus hast du viele Anschlussmöglichkeiten. Du möchtest auf den Bus 89 Richtung Heizenholz. Welche Elemente an der Haltestelle helfen dir, beim Umstieg die richtige Haltekante zu finden?</label>
+					<textarea id="antwort08a" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<label for="antwort08b" class="quizz-label">An der Haltestelle des Bus 89 fährt auch eine ganz spezielle Linie. Wie heisst sie und was für ein Konzept steckt dahinter?</label>
+					<textarea id="antwort08b" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<label for="antwort08c" class="quizz-label">An dieser Haltestelle hat es leider keinen DFI. Damit du trotzdem in Echtzeit weisst, wann dein nächster Bus kommt, scanne den QR-Code auf dem Aushangfahrplan. Hat der nächste Bus gegenüber dem Soll-Fahrplan Verspätung? Wenn ja, wieviel?</label>
+					<textarea id="antwort08c" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<label for="antwort08d" class="quizz-label">Ein weiteres Element des Aushangfahrplans ist die sogenannte Perlschnur. Wenn du dir eine Perlschnur bildlich vorstellst, erkennst du sicher schnell, welches Element damit gemeint ist. Die Perlschnur enthält diverse Informationen, z.B. an welcher Haltestelle hält der Bus 89 direkt vor dem Hubertus? Wie heisst die 5. Station nach Hubertus? Wie lange dauert die Fahrt ab Hubertus bis an die Flurstrasse?</label>
+					<textarea id="antwort08d" placeholder="Notiere, was du siehst..."  class="text-antwort"></textarea>
+					<p class="quizz-text">Nimm nun den Bus 89 bis zur Flurstrasse.</p>
+					<button type="button" id="submitButton08" onclick="inputCheck_08()" class="submit-button">Weiter</button>
+				</div>
+			</div>
+			<button type="button" id="buttonQuiz09" class="collapsible">Flurstrasse</button>
+			<div class="content">
+				<div class="content-box">
+					<p class="quizz-text">Du bist nun beim Hintereingang des VBZ-Areals und damit am Ende der MI-Tour angekommen. Hier befindet sich übrigens eine weitere ZüriMobil-Station. Mit deinem Badge gelangst du durch den Personaleingang wieder zum Hauptgebäude.</p>
+					<p class="quizz-text">Erzähl' Fanny bei einem Kaffee persönlich von deinen Erfahrungen auf der MI-Tour und bringe gerne auch allfällige Ideen ein, welches Erlebnis hier unbe-dingt auch noch rein muss!</p>
+				</div>
+			</div>
+		<section>
+	</div>
+</body>
+</html>

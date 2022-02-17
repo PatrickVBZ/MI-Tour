@@ -1,0 +1,167 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+
+
+.header-box {
+	width: 100%;
+	margin: 0 0 21px;
+	background-color: #124e91;
+	display: flex;
+	justify-content: center;
+}
+.main-title {
+	width: 690px;
+	margin: 0;
+	padding: 21px 23px 17px;
+	color: #fff;
+}
+
+
+.body-box {
+	width: 100%;
+}
+@media only screen and (min-width: 650px) {
+	.body-box {
+		width: 650px;
+	}
+}
+.intro{
+	padding: 0 18px;
+}
+.subtitle, .intro-text, .hinweise {
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+}
+.hinweise {
+	margin: 28px 0 28px;
+}
+.hinweise .subtitle, .hinweise li{
+	font-style: italic;
+	margin: 5px 0;
+	font-size: 16px;
+}
+.hinweise ul {
+	padding: 0 0 0 25px;
+	margin: 5px 0 16px;
+}
+
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+	background-color: #124e91;
+	color: #fff;
+	cursor: pointer;
+	padding: 15px 18px 13px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 25px;
+	vertical-align: middle;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+	background-color: #093c75;
+}
+.collapsible.done {
+	background-color: #124e91;
+}
+.collapsible:disabled {
+	background-color: #4c7baf;
+	color: #fff;
+}
+/* Add icons */
+.collapsible:after {
+	content: "\FF0B";
+	font-size: 25px;
+	color: #fff;
+	float: right;
+	margin-left: 5px;
+}
+.active:after {
+	content: "\FF0D"; /* Unicode character for "minus" sign (-) */
+	font-size: 25px;
+	color: #fff;
+	float: right;
+	margin-left: 5px;
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+	padding: 1px 0 0;
+	overflow: hidden;
+	background-color: #f2f2f2;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+	color: #333;
+}
+.content-box {
+	padding: 12px 18px 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.quizz-text, .quizz-label {
+	margin: 0;
+}
+.text-antwort {
+	height: 200px;
+	font-size: 16px;
+	font-family: inherit;
+	border-radius: 5px;
+	padding: 5px;
+}
+.text-antwort:focus {
+	outline: none;
+	border: 2px solid #093c75;
+}
+.text-antwort.not-done {
+	border: 2px solid #c32340;
+}
+.text-antwort.not-done:focus {
+	outline: none;
+	border: 2px solid #8e0e26;
+	box-shadow: 0 4px 8px 0 #8e0e2620, 0 6px 20px 0 #8e0e2619;
+}
+.text-link:link, .text-link:visited {
+	text-decoration: underline;
+	color: #093c75;
+}
+.text-link:hover, .text-link:active {
+	text-decoration: underline;
+	color: #052d5a;
+}
+.quizz-hinweis {
+	font-style: italic;
+}
+.submit-button {
+	width: 35%;
+	align-self: flex-end;
+	font-size: 20px;
+    font-family: inherit;
+    background-color: #124e91;
+    border: 2px solid #052d5a;
+    padding: 11px 0 9px;
+	border-radius: 5px;
+	color: #fff;
+}
+.submit-button:active {
+	background-color: #093c75;
+}
+.submit-button:disabled {
+	background-color: #124e9155;
+    border: 2px solid #052d5a55;
+}
