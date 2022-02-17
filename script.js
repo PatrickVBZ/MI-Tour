@@ -32,7 +32,17 @@ function loadAnswer(antwortFeld) {
 }
 
 function loadStoredAnswers() {
-	if (antwort01 = loadAnswer("antwort01")) document.getElementById("antwort01").value = antwort01;
+	if (antwort = loadAnswer("antwort01")) {
+		document.getElementById("antwort01").value = antwort;
+		inputCheck_01();
+	}
+	if (antwort = loadAnswer("antwort02a")) {
+		document.getElementById("antwort02a").value = antwort;
+	}
+	if (antwort = loadAnswer("antwort02b")) {
+		document.getElementById("antwort02b").value = antwort;
+		inputCheck_02();
+	}	
 }
 
 function correctAnswer(pres, next) {
