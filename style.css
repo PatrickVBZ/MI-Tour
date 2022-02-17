@@ -12,18 +12,34 @@ body {
 
 
 
-.header-box {
+.header-row {
 	width: 100%;
 	margin: 0 0 21px;
 	background-color: #124e91;
 	display: flex;
 	justify-content: center;
 }
-.main-title {
+.header-box {
 	width: 690px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.main-title {
 	margin: 0;
 	padding: 21px 23px 17px;
 	color: #fff;
+}
+.reset-button {
+	background-color: inherit;
+	color: #fff;
+	border: none;
+	padding: 38px 23px 0 0;
+	font-size: 20px;
+}
+.reset-button:active {
+	font-weight: bold;
 }
 
 

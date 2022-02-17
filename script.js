@@ -25,6 +25,30 @@ function storeAnswer(antwortFeld) {
 	document.cookie = antwortFeld.id + "=" + encodeURI(antwortFeld.value) + "; expires=" + expires.toUTCString() + ";path=/";
 }
 
+function deleteAnswer(antwortFeld) {
+	document.cookie = antwortFeld + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	document.getElementById("antwort01").value = "";
+}
+
+function deleteAllAnswers() {
+	if (window.confirm("Willst du wirklich alle Anworten löschen?")) {		
+		deleteAnswer("antwort01");
+		deleteAnswer("antwort02a");
+		deleteAnswer("antwort02b");
+		deleteAnswer("antwort03");
+		deleteAnswer("antwort04");
+		deleteAnswer("antwort05");
+		deleteAnswer("antwort06");
+		deleteAnswer("antwort07a");
+		deleteAnswer("antwort07b");
+		deleteAnswer("antwort08a");
+		deleteAnswer("antwort08b");
+		deleteAnswer("antwort08c");
+		deleteAnswer("antwort08d");
+		location.reload();
+	}
+}
+
 function loadAnswer(antwortFeld) {
 	let re = new RegExp(antwortFeld + "=([^;]+)");
 	let value = re.exec(document.cookie);
@@ -33,16 +57,53 @@ function loadAnswer(antwortFeld) {
 
 function loadStoredAnswers() {
 	if (antwort = loadAnswer("antwort01")) {
+		toggleCollapsible(document.getElementById("submitButton01"));
 		document.getElementById("antwort01").value = antwort;
-		inputCheck_01();
+		correctAnswer("01", "02");
 	}
 	if (antwort = loadAnswer("antwort02a")) {
 		document.getElementById("antwort02a").value = antwort;
 	}
 	if (antwort = loadAnswer("antwort02b")) {
 		document.getElementById("antwort02b").value = antwort;
-		inputCheck_02();
-	}	
+		correctAnswer("02", "03");
+	}
+	if (antwort = loadAnswer("antwort03")) {
+		document.getElementById("antwort03").value = antwort;
+		correctAnswer("03", "04");
+	}
+	if (antwort = loadAnswer("antwort04")) {
+		document.getElementById("antwort04").value = antwort;
+		correctAnswer("04", "05");
+	}
+	if (antwort = loadAnswer("antwort05")) {
+		document.getElementById("antwort05").value = antwort;
+		correctAnswer("05", "06");
+	}
+	if (antwort = loadAnswer("antwort06")) {
+		document.getElementById("antwort06").value = antwort;
+		correctAnswer("06", "07");
+	}
+	if (antwort = loadAnswer("antwort07a")) {
+		document.getElementById("antwort07a").value = antwort;
+	}
+	if (antwort = loadAnswer("antwort07b")) {
+		document.getElementById("antwort07b").value = antwort;
+		correctAnswer("07", "08");
+	}
+	if (antwort = loadAnswer("antwort08a")) {
+		document.getElementById("antwort08a").value = antwort;
+	}
+	if (antwort = loadAnswer("antwort08b")) {
+		document.getElementById("antwort08b").value = antwort;
+	}
+	if (antwort = loadAnswer("antwort08c")) {
+		document.getElementById("antwort08c").value = antwort;
+	}
+	if (antwort = loadAnswer("antwort08d")) {
+		document.getElementById("antwort08d").value = antwort;
+		correctAnswer("08", "09");
+	}
 }
 
 function correctAnswer(pres, next) {
