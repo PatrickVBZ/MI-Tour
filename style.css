@@ -8,6 +8,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	scroll-behavior: smooth;
 }
 
 
@@ -52,12 +53,17 @@ body {
 	}
 }
 .intro{
+	display: flex;
+	flex-flow: column nowrap;
 	padding: 0 18px;
 }
 .subtitle, .intro-text, .hinweise {
 	font-size: 16px;
 	color: #333;
 	font-weight: normal;
+}
+.start-button {
+	margin: 6px 0;
 }
 .hinweise {
 	margin: 28px 0 28px;

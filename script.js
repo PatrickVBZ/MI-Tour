@@ -19,6 +19,7 @@ function toggleCollapsible(x) {
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     }
+	started = true;
 };
 
 function storeAnswer(antwortFeld) {
@@ -103,6 +104,15 @@ function loadStoredAnswers() {
 	if (antwort = loadAnswer("antwort08d")) {
 		document.getElementById("antwort08d").value = antwort;
 		correctAnswer("08", "09");
+	}
+}
+
+var started = false;
+function startTour() {
+	if (!started) {
+		let buttonQuiz01 = document.getElementById("buttonQuiz01");
+		toggleCollapsible(buttonQuiz01);
+		buttonQuiz01.scrollIntoView();
 	}
 }
 
