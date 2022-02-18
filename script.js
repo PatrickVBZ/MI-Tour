@@ -113,6 +113,8 @@ function startTour() {
 		let buttonQuiz01 = document.getElementById("buttonQuiz01");
 		toggleCollapsible(buttonQuiz01);
 		buttonQuiz01.scrollIntoView();
+	} else {
+		alert("Sie haben bereits gestartet. :-)");
 	}
 }
 
@@ -124,6 +126,7 @@ function correctAnswer(pres, next) {
 	let buttonQuizNext = document.getElementById("buttonQuiz" + next);
 	buttonQuizNext.disabled = false;
 	toggleCollapsible(buttonQuizNext);
+	buttonQuizNext.scrollIntoView();
 }
 
 function correctField(field) {
