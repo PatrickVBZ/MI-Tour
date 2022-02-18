@@ -58,7 +58,7 @@ function loadAnswer(antwortFeld) {
 
 function loadStoredAnswers() {
 	if (antwort = loadAnswer("antwort01")) {
-		toggleCollapsible(document.getElementById("submitButton01"));
+		toggleCollapsible(document.getElementById("buttonQuiz01"));
 		document.getElementById("antwort01").value = antwort;
 		correctAnswer("01", "02");
 	}
