@@ -126,7 +126,7 @@ function correctAnswer(pres, next) {
 	let buttonQuizNext = document.getElementById("buttonQuiz" + next);
 	buttonQuizNext.disabled = false;
 	toggleCollapsible(buttonQuizNext);
-	buttonQuizNext.scrollIntoView();
+	//buttonQuizNext.scrollIntoView();
 }
 
 function correctField(field) {
