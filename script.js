@@ -59,50 +59,76 @@ function loadAnswer(antwortFeld) {
 function loadStoredAnswers() {
 	if (antwort = loadAnswer("antwort01")) {
 		toggleCollapsible(document.getElementById("buttonQuiz01"));
-		document.getElementById("antwort01").value = antwort;
+		antwortFeld = document.getElementById("antwort01");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("01", "02");
 	}
 	if (antwort = loadAnswer("antwort02a")) {
-		document.getElementById("antwort02a").value = antwort;
+		antwortFeld = document.getElementById("antwort02a");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 	}
 	if (antwort = loadAnswer("antwort02b")) {
-		document.getElementById("antwort02b").value = antwort;
+		antwortFeld = document.getElementById("antwort02b");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("02", "03");
 	}
 	if (antwort = loadAnswer("antwort03")) {
-		document.getElementById("antwort03").value = antwort;
+		antwortFeld = document.getElementById("antwort03");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("03", "04");
 	}
 	if (antwort = loadAnswer("antwort04")) {
-		document.getElementById("antwort04").value = antwort;
+		antwortFeld = document.getElementById("antwort04");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("04", "05");
 	}
 	if (antwort = loadAnswer("antwort05")) {
-		document.getElementById("antwort05").value = antwort;
+		antwortFeld = document.getElementById("antwort05");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("05", "06");
 	}
 	if (antwort = loadAnswer("antwort06")) {
-		document.getElementById("antwort06").value = antwort;
+		antwortFeld = document.getElementById("antwort06");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("06", "07");
 	}
 	if (antwort = loadAnswer("antwort07a")) {
-		document.getElementById("antwort07a").value = antwort;
+		antwortFeld = document.getElementById("antwort07a");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 	}
 	if (antwort = loadAnswer("antwort07b")) {
-		document.getElementById("antwort07b").value = antwort;
+		antwortFeld = document.getElementById("antwort07b");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("07", "08");
 	}
 	if (antwort = loadAnswer("antwort08a")) {
-		document.getElementById("antwort08a").value = antwort;
+		antwortFeld = document.getElementById("antwort08a");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 	}
 	if (antwort = loadAnswer("antwort08b")) {
-		document.getElementById("antwort08b").value = antwort;
+		antwortFeld = document.getElementById("antwort08b");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 	}
 	if (antwort = loadAnswer("antwort08c")) {
-		document.getElementById("antwort08c").value = antwort;
+		antwortFeld = document.getElementById("antwort08c");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 	}
 	if (antwort = loadAnswer("antwort08d")) {
-		document.getElementById("antwort08d").value = antwort;
+		antwortFeld = document.getElementById("antwort08d");
+		antwortFeld.value = antwort;
+		antwortFeld.disabled = true;
 		correctAnswer("08", "09");
 	}
 }
